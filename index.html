@@ -14,12 +14,21 @@
       text-align: center;
       max-width: 50%;
     }
+    
+    #pineapple { 
+        transform-origin:50% 50%;
+        animation:10s rotateRight infinite linear; 
+    }
+
+    @keyframes rotateRight {
+        100%{ transform:rotate(360deg); }
+    }
 </style>
 </head>
 <body>
 <main>
     <div class="centered">
-        <img src="pineapple.jpg">
+        <img src="pineapple.jpg" id="pineapple">
         <p>Coming soon...</p>
     </div>
 </main>
