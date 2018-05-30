@@ -1,5 +1,10 @@
 <?php
-$html = file_get_contents('https://www.epfl.ch/');
+
+if ($_SERVER['REQUEST_URI'] == "/index.en.html") {
+	$html = file_get_contents('https://www.epfl.ch/index.en.html');
+} else {
+	$html = file_get_contents('https://www.epfl.ch/');
+};
 $html = str_replace('href="//', 'href="https://', $html);
 $html = str_replace('src="/', 'src="https://www.epfl.ch/', str_replace('href="/', 'href="https://www.epfl.ch/', $html));
 $html = str_replace('<link href="https://www.epfl.ch/public/hp2013/css/app.e49decc256e9.css" rel="stylesheet" type="text/css" />', '<style>'.file_get_contents('https://www.epfl.ch/public/hp2013/css/app.e49decc256e9.css').'</style>', $html); 
