@@ -4,7 +4,7 @@ $html = str_replace('href="//', 'href="https://', $html);
 $html = str_replace('src="/', 'src="https://www.epfl.ch/', str_replace('href="/', 'href="https://www.epfl.ch/', $html));
 $html = str_replace('<link href="https://www.epfl.ch/public/hp2013/css/app.e49decc256e9.css" rel="stylesheet" type="text/css" />', '<style>'.file_get_contents('https://www.epfl.ch/public/hp2013/css/app.e49decc256e9.css').'</style>', $html); 
 $html = str_replace('../epfl-bootstrap/fonts/epfl-icons.8d666797fa9a.woff', '/fonts/epfl-icons.8d666797fa9a.woff', $html);
-
+$html = str_replace('src="visual', 'src="https://www.epfl.ch/visual', $html);
 $html = str_replace('<head>', '<!--
 
        .__                                   .__  ________________________________.____     
