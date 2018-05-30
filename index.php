@@ -21,6 +21,11 @@ ______ |__| ____   ____ _____  ______ ______ |  | \_   _____/\______   \_   ____
 
 --><head>', $html);
 
+$html = str_replace('<svg width="95" height="46"><image xlink:href="https://www.epfl.ch/public/hp2013/epfl-bootstrap/images/logo.c366d4772210.svg" src="https://www.epfl.ch/public/hp2013/epfl-bootstrap/images/logo.0db041f79158.png" width="95" height="46" /></svg>', '<img src="logo.jpg">', $html);
+
+//$html = str_replace('https://www.epfl.ch/public/hp2013/epfl-bootstrap/images/logo.0db041f79158.png', 'logo.jpg', $html);
+//$html = str_replace('xlink:href="https://www.epfl.ch/public/hp2013/epfl-bootstrap/images/logo.c366d4772210.svg"', '', $html);
+
 
 $html = str_replace('EPFL', '🍍PINEAPPEPFL🍍', $html);
 echo ($html);
